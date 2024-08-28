@@ -1,0 +1,9 @@
+.App{
+  background-color: green;
+  min-width: var(--max-w);
+  min-height: var(--max-h);
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  border-radius: 1.5vh;
+}
