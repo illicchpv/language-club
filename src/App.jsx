@@ -4,7 +4,6 @@ import {useState} from 'react';
 import {Login} from './modules/Login';
 import {SelectSection} from './modules/SelectSection';
 
-// const apiUrl = process.env.REACT_APP_API_BASE_URL;
 console.log(import.meta.env.VITE_SOME_KEY)
 console.log(import.meta.env.VITE_NAME)
 
