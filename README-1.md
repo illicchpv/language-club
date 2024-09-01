@@ -25,4 +25,6 @@ https://animation-aleks.onrender.com/
   использование в коде 
   import.meta.env.VITE_SOME_KEY
 
---------------
+-------------
+
+npm i vite-plugin-pwa

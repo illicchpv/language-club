@@ -27,6 +27,8 @@
     transition: 2s;
   }
   .t1{
+    font-size: 24px;
+    font-weight: 600;
     position: absolute;
     color: rgb(255, 255, 255, 1);
     top: calc(var(--max-h) * 0.5 - 0.7em);
@@ -34,6 +36,8 @@
     transition: 2s;
   }
   .t2{
+    font-size: 32px;
+    font-weight: 400;
     position: absolute;
     color: rgb(255, 255, 255, 0);
     top: calc(var(--max-h) * 0.5 - 0.7em);
@@ -113,6 +117,7 @@
   }
 
   .welcome{
+    font-size: 32px;
     position: absolute;
     height: 100%;
     top: 0;
@@ -173,6 +178,7 @@
       /* width: var(--max-w); */
       width: 100%;
       left: 0;
+      background-color: #5136ff;
     }
   }
 

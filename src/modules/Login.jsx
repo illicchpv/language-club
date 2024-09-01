@@ -77,8 +77,8 @@ export const Login = ({setUser, setIsLoginVisible}) => {
     >
 
       <div className="point"></div>
-      <div className="t1">text1</div>
-      <div className="t2">text2 text2</div>
+      <div className="t1">ASDH</div>
+      <div className="t2">language Club</div>
 
       <form className='form'
         onSubmit={handlerLoginSubmit}
@@ -86,7 +86,7 @@ export const Login = ({setUser, setIsLoginVisible}) => {
         <input className='inputName' type="text" placeholder='name (Admin)' autoFocus minLength={3} required
           onChange={(e) => setName(e.target.value)} value={name}
         />
-        <input className='inputPassword' type="password" placeholder='password' minLength={5} required
+        <input className='inputPassword' type="password" placeholder='password (>2ch)' minLength={3} required
           onChange={(e) => setPassword(e.target.value)} value={password}
         />
         <div className="error">{error}</div>
