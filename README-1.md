@@ -28,3 +28,10 @@ https://animation-aleks.onrender.com/
 -------------
 
 npm i vite-plugin-pwa
+
+github:  
+https://github.com/illicchpv/language-club
+
+on render:  
+https://language-club.onrender.com/
+

@@ -46,10 +46,15 @@ export const Login = ({setUser, setIsLoginVisible}) => {
       debounced1(stage + 1);
     else {
       console.log('setTimeout ');
-      if (stage > lastAutoStep)
+      if (stage == lastAutoStep){ // ???
+        loginRef.current.querySelector('.inputName').focus();
+        loginRef.current.querySelector('.inputName').select();
+      }
+      if (stage > lastAutoStep){
         setTimeout(() => {
           setIsLoginVisible(false);
         }, 1000);
+      }
     }
   };
 
@@ -60,9 +65,10 @@ export const Login = ({setUser, setIsLoginVisible}) => {
       setError('Wrong name! Try Admin');
       return;
     }
-    setUser({});
+    setUser({name});
     // const s = stageToClassName(lastAutoStep + 1);
     // console.log('s: ', s);
+
     setStage(lastAutoStep + 1);
   };
 
