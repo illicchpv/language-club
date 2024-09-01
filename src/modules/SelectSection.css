@@ -1,0 +1,112 @@
+.SelectSection {
+  background-color: white;
+  width: var(--max-w);
+  min-height: var(--max-h);
+
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
+
+
+  &>.title {
+    background-color: #5136ff;
+    color: white;
+    font-size: calc(var(--max-h) * 0.1 * 0.2);
+    margin: 0;
+    height: calc(var(--max-h) * 0.1);
+
+    display: flex;
+    justify-content: center;
+    align-items: center;
+  }
+
+  .blocksGrid {
+    margin-top: 22px;
+    --pad: 30px;
+    --gap: 10px;
+    padding: 0 var(--pad);
+
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: space-between;
+    align-items: center;
+    gap: var(--gap);
+
+    .block1 {
+      font-size: 14px;
+      width: calc((var(--max-w)/2) - var(--pad) - (var(--gap)/2));
+      /* width: calc(var(--max-w)); */
+      min-height: 77px;
+      box-shadow: 0 4px 4px 0 rgba(0, 0, 0, 0.4);
+      background: #f7f7f7;
+    }
+  }
+
+  .blocksGrid2 {
+    margin-top: 20px;
+    --pad: 30px;
+    --gap: 10px;
+    padding: 0 var(--pad);
+
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: space-between;
+    align-items: center;
+    gap: var(--gap);
+
+    .block2 {
+      font-size: 14px;
+      width: var(--max-w);
+      /* width: calc(var(--max-w)); */
+      min-height: 124px;
+      box-shadow: 0 4px 4px 0 rgba(0, 0, 0, 0.25);
+      background: #f7f7f7;
+
+      .title{
+        font-size: 16px;
+      }
+      .text{
+        margin-top: 2px;
+        font-size: 11px;
+      }
+      .progress{
+        margin-top: 15px;
+        padding: 0 12px;
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+
+        .counts{
+          font-size: 15px;
+        }
+
+        .line{
+          width: 100%;
+        }
+      }
+      
+    }
+  }
+
+
+  .block1, .block2 {
+    padding: 8px;
+
+    &.blue{
+      border-bottom: 4px solid #20f;
+    }
+    &.green{
+      border-bottom: 4px solid #00ff26;
+    }
+    &.red{
+      border-bottom: 4px solid #f00;
+    }
+    &.yellow{
+      border-bottom: 4px solid #ffd500;
+    }
+  }
+
+  .footer {
+    flex-grow: 1;
+  }
+}

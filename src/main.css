@@ -1,12 +1,16 @@
 * {
   box-sizing: border-box;
   font-size: inherit;
+  transition-timing-function: inherit;
 }
 
 :root {
   --brdr: 1vh;
   --max-h: calc(100vh - 2 * var(--brdr));
-  --max-w: max( calc(var(--max-h)/2), 320px);
+  --max-w: max(calc(var(--max-h)/2), 320px);
+  --page-l: 0;
+  --page-r: var(--max-w);
+
   --brdr-clr: gold;
   --desc-clr: lightgray;
 
@@ -23,13 +27,15 @@
   text-rendering: optimizeLegibility;
   -webkit-font-smoothing: antialiased;
   -moz-osx-font-smoothing: grayscale;
+
+  transition-timing-function: linear;
 }
 
 body {
   margin: 0;
   display: flex;
   justify-content: center;
-  
+
   min-height: 100vh;
   min-width: 100vw;
   background-color: var(--desc-clr);
@@ -46,6 +52,11 @@ body {
   border: var(--brdr) solid var(--brdr-clr);
   background-color: var(--brdr-clr);
   position: relative;
+}
+
+:is(h1, h2, h3, h4, p) {
+  margin: 0;
+  font-weight: 400;
 }
 
 

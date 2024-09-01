@@ -1,0 +1,180 @@
+.Login {
+  --point-sz: calc(var(--max-w) * 0.2);
+  background-color: white;
+  width: var(--max-w);
+  height: var(--max-h);
+  position: relative;
+  overflow: hidden;
+
+  font-size: 32px;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+
+  left: var(--page-l);
+
+  transition: 2s;
+
+  .point {
+    position: absolute;
+    font-size: 0;
+    line-height: 0;
+    width: var(--point-sz);
+    height: var(--point-sz);
+    background-color: blue;
+    border-radius: 50%;
+
+    transition: 2s;
+  }
+  .t1{
+    position: absolute;
+    color: rgb(255, 255, 255, 1);
+    top: calc(var(--max-h) * 0.5 - 0.7em);
+
+    transition: 2s;
+  }
+  .t2{
+    position: absolute;
+    color: rgb(255, 255, 255, 0);
+    top: calc(var(--max-h) * 0.5 - 0.7em);
+
+    transition: 2s;
+  }
+
+  .form{
+    font-size: 20px;
+    position: absolute;
+    width: 0px;
+    height: 0px;
+    background-color: rgba(222, 0 , 0, 0.5);
+    /* overflow: hidden; */
+    --inp-sz: calc(var(--max-w) * 0.5);
+
+  }
+
+  input {
+    padding: 10px 20px;
+    border-radius: 10px;
+    border: 0;
+  }
+
+  .inputName{
+    position: absolute;
+    outline: 0;
+    /* left: calc(100px - var(--inp-sz)); */
+    width: var(--inp-sz);
+    top: -100px;
+    left: calc(0px - var(--max-w) / 2 - var(--inp-sz));
+
+    transition: 1s;
+  }
+  .inputPassword{
+    position: absolute;
+    outline: 0;
+    /* right: -200px; */
+    width: var(--inp-sz);
+    top: 0px;
+    left: calc(var(--max-w) / 2 - 0px);
+
+    transition: 1s;
+  }
+  .error{
+    position: absolute;
+    color: red;
+    top: 50px;
+    left: calc(var(--max-w) / 2 - 0px);
+    font-size: 12px;
+    width: var(--inp-sz);
+
+    transition: 0;
+  }
+
+  .btnBlock{
+    position: absolute;
+    top: calc(var(--max-h) / 2 - 145px * (3 / 4));
+    left: calc(var(--max-w) / 2);
+    width: 145px;
+    height: 145px;
+    background-color: white;
+    border-radius: 50%;
+
+    transition: 1s;
+
+    .btnLogin{
+      margin-top: 30px;
+      margin-left: 25px;
+      width: 75px;
+      height: 75px;
+      border: 0;
+      outline: 0;
+      border-radius: 50%;
+      cursor: pointer;
+    }
+  }
+
+  .welcome{
+    position: absolute;
+    height: 100%;
+    top: 0;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    background-color: white;
+    overflow: hidden;
+
+    width: 0px;
+    left: 100%;
+
+    transition: 1s;
+  }
+
+  &.onGoing{
+    /* top: 100px */
+    .point{
+      --point-sz: calc(var(--max-w) * 1.2);
+    }
+    .t1{
+      color: rgb(255, 255, 255, 0);
+    }
+    .t2{
+      color: rgb(255, 255, 255, 1);
+    }
+  }
+  &.onEnd{
+    background-color: blue;
+    .t2{
+      top: 100px;
+    }
+  }
+  &.onFields{
+    .inputName{
+      left: calc(0px - var(--inp-sz) / 2);
+    }
+    .inputPassword{
+      left: calc(0px - var(--inp-sz) / 2);
+    }
+    .error{
+      left: calc(0px - var(--inp-sz) / 2);
+    }
+
+    .btnBlock{
+      left: calc(var(--max-w) / 2 - 145px * (3 / 4));
+    }
+  }
+  &.ifLoginOk{
+    /* --page-l: calc(20px - var(--max-w)); */
+    /* width: calc(var(--max-w) * 2); */
+
+    .t2, .form{
+      left: calc(0px - var(--max-w));
+    }
+
+    .welcome{
+      /* width: var(--max-w); */
+      width: 100%;
+      left: 0;
+    }
+  }
+
+
+}
